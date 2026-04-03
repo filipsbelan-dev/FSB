@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio — Filip S. Belan</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav class="navbar">
+     <img src="logo.webp" alt="Logo" class="logo">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Úvod</a></li>
+      <li><a href="sluzby.html">Služby</a></li>
+      <li><a href="portfolio.html" class="active">Portfólio</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <p class="hero-eyebrow">Vybrané práce</p>
+        <h1>Portfólio</h1>
+      </div>
+    </section>
+
+    <!-- FILTER -->
+    <section class="portfolio-page">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">Všetko</button>
+        <button class="filter-btn" data-filter="grafika">Grafika</button>
+        <button class="filter-btn" data-filter="fotografia">Fotografia</button>
+        <button class="filter-btn" data-filter="video">Video</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+      </div>
+
+      <div class="gallery-masonry" id="gallery">
+        <div class="gallery-item" data-category="grafika"><img src="1.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
+        <div class="gallery-item" data-category="fotografia"><img src="2.webp" alt=""/><div class="gallery-overlay"><span>Grafika</span></div></div>
+        <div class="gallery-item" data-category="video"><img src="3.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
+        <div class="gallery-item" data-category="web"><img src="4.webp" alt=""/><div class="gallery-overlay"><span>Video</span></div></div>
+        <div class="gallery-item" data-category="grafika"><img src="5.webp" alt=""/><div class="gallery-overlay"><span>Grafika</span></div></div>
+        <div class="gallery-item" data-category="fotografia"><img src="6.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
+        <div class="gallery-item" data-category="web"><img src="7.webp" alt=""/><div class="gallery-overlay"><span>Web</span></div></div>
+        <div class="gallery-item" data-category="grafika"><img src="8.webp" alt=""/><div class="gallery-overlay"><span>Grafika</span></div></div>
+        <div class="gallery-item" data-category="fotografia"><img src="9.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
+        <div class="gallery-item" data-category="video"><img src="11.webp" alt=""/><div class="gallery-overlay"><span>Video</span></div></div>
+        <div class="gallery-item" data-category="grafika"><img src="13.webp" alt=""/><div class="gallery-overlay"><span>Grafika</span></div></div>
+        <div class="gallery-item" data-category="fotografia"><img src="14.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
+        <div class="gallery-item" data-category="grafika"><img src="15.webp" alt=""/><div class="gallery-overlay"><span>Grafika</span></div></div>
+        <div class="gallery-item" data-category="fotografia"><img src="16.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
+        <div class="gallery-item" data-category="video"><img src="17.webp" alt=""/><div class="gallery-overlay"><span>Video</span></div></div>
+        <div class="gallery-item" data-category="web"><img src="18.webp" alt=""/><div class="gallery-overlay"><span>Web</span></div></div>
+        <div class="gallery-item" data-category="fotografia"><img src="19.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
+        <div class="gallery-item" data-category="grafika"><img src="20.webp" alt=""/><div class="gallery-overlay"><span>Grafika</span></div></div>
+        <div class="gallery-item" data-category="fotografia"><img src="21.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
+        <div class="gallery-item" data-category="video"><img src="22.webp" alt=""/><div class="gallery-overlay"><span>Video</span></div></div>
+        <div class="gallery-item" data-category="grafika"><img src="23.webp" alt=""/><div class="gallery-overlay"><span>Grafika</span></div></div>
+        <div class="gallery-item" data-category="fotografia"><img src="24.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
+        <div class="gallery-item" data-category="grafika"><img src="25.webp" alt=""/><div class="gallery-overlay"><span>Grafika</span></div></div>
+        <div class="gallery-item" data-category="fotografia"><img src="26.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
+        <div class="gallery-item" data-category="video"><img src="27.webp" alt=""/><div class="gallery-overlay"><span>Video</span></div></div>
+        <div class="gallery-item" data-category="web"><img src="28.webp" alt=""/><div class="gallery-overlay"><span>Web</span></div></div>
+        <div class="gallery-item" data-category="fotografia"><img src="29.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
+        <div class="gallery-item" data-category="grafika"><img src="30.webp" alt=""/><div class="gallery-overlay"><span>Grafika</span></div></div>
+        <div class="gallery-item" data-category="fotografia"><img src="31.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
+        <div class="gallery-item" data-category="video"><img src="32.webp" alt=""/><div class="gallery-overlay"><span>Video</span></div></div>
+        <div class="gallery-item" data-category="grafika"><img src="33.webp" alt=""/><div class="gallery-overlay"><span>Grafika</span></div></div>
+        <div class="gallery-item" data-category="fotografia"><img src="34.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
+        <div class="gallery-item" data-category="web"><img src="35.webp" alt=""/><div class="gallery-overlay"><span>Web</span></div></div>
+        <div class="gallery-item" data-category="grafika"><img src="36.webp" alt=""/><div class="gallery-overlay"><span>Grafika</span></div></div>
+        <div class="gallery-item" data-category="fotografia"><img src="37.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <button class="lightbox-prev" id="lightboxPrev">‹</button>
+    <img src="" alt="" id="lightboxImg"/>
+    <button class="lightbox-next" id="lightboxNext">›</button>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+       <img src="logo.webp" alt="Logo" class="logo footer-logo">
+    </a>
+      <div class="footer-links">
+        <a href="sluzby.html">Služby</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <p class="footer-copy">© 2026 Filip S. Belan DΞSIGИ</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

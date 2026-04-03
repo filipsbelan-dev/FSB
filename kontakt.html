@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontakt — Filip S. Belan</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav class="navbar">
+     <img src="logo.webp" alt="Logo" class="logo">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Úvod</a></li>
+      <li><a href="sluzby.html">Služby</a></li>
+      <li><a href="portfolio.html">Portfólio</a></li>
+      <li><a href="kontakt.html" class="active">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <p class="hero-eyebrow">Spojme sa</p>
+        <h1>Kontakt</h1>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-inner">
+
+        <div class="contact-info">
+          <h2>Porozprávajme sa<br><em>o vašom projekte</em></h2>
+          <p>Či už máte konkrétnu predstavu alebo len nápad — rád si vypočujem čo potrebujete a navrhneme riešenie spoločne.</p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <div>
+                <span class="contact-item-label">Email</span>
+                <a href="mailto:info@filipbelan.sk" class="contact-item-value">filipsbelan@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <div>
+                <span class="contact-item-label">Telefón</span>
+                <a href="tel:+421900000000" class="contact-item-value">+421 915 124 366</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M21 2H3v16h5l3 3 3-3h7V2z" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <div>
+                <span class="contact-item-label">Instagram</span>
+                <a href="https://instagram.com/filipsbelan_design" target="_blank" class="contact-item-value">@filipsbelan_design</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Meno</label>
+            <input type="text" id="name" name="name" placeholder="Vaše meno" required/>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="vas@email.sk" required/>
+          </div>
+          <div class="form-group">
+            <label for="service">Typ projektu</label>
+            <select id="service" name="service">
+              <option value="">Vybrať...</option>
+              <option>Grafický dizajn</option>
+              <option>Fotografia</option>
+              <option>Video produkcia</option>
+              <option>Web dizajn</option>
+              <option>Kombinovaný projekt</option>
+              <option>Iné</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Správa</label>
+            <textarea id="message" name="message" rows="5" placeholder="Opíšte váš projekt alebo ideu..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--gold btn--full">Odoslať správu</button>
+          <p class="form-note">Odpoviem do 24 hodín.</p>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+       <img src="logo.webp" alt="Logo" class="logo footer-logo">
+    </a>
+      <div class="footer-links">
+        <a href="sluzby.html">Služby</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <p class="footer-copy">© 2026 Filip S. Belan DΞSIGИ</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+

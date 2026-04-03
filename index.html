@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Filip S. Belan — Kreatívne štúdio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.webp" alt="Logo" class="logo">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Úvod</a></li>
+      <li><a href="sluzby.html">Služby</a></li>
+      <li><a href="portfolio.html">Portfólio</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="hero-noise"></div>
+        <div class="hero-line hero-line--1"></div>
+        <div class="hero-line hero-line--2"></div>
+        <div class="hero-line hero-line--3"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Filip S. Belan DΞSIGИ</p>
+        <h1 class="hero-title">
+          <span class="hero-title--light">Vizuálny</span>
+          <span class="hero-title--italic">príbeh</span>
+          <span class="hero-title--light">ktorý</span>
+          <span class="hero-title--gold">zanechá stopu</span>
+        </h1>
+        <p class="hero-sub">Grafika · Fotografia · Video · Web</p>
+        <div class="hero-cta">
+          <a href="portfolio.html" class="btn btn--gold">Zobraziť práce</a>
+          <a href="kontakt.html" class="btn btn--outline">Spolupráca</a>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>scroll</span>
+        <div class="hero-scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro">
+      <div class="intro-inner">
+        <div class="intro-label">O mne</div>
+        <div class="intro-text">
+          <h2>Volám sa <em>Filip S.</em> a tvorím s vášňou pre detail</h2>
+          <p>Som kreatívec z Handlovej, ktorý spája grafický dizajn, fotografiu, video a tvorbu webových stránok do jedného celku. Každý projekt beriem ako príležitosť vyrozprávať jedinečný príbeh.</p>
+          <a href="sluzby.html" class="link-arrow">Pozrieť služby →</a>
+        </div>
+        <div class="intro-stats">
+          <div class="stat">
+            <span class="stat-num">6+</span>
+            <span class="stat-label">Rokov skúseností</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">100+</span>
+            <span class="stat-label">Projektov</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">4</span>
+            <span class="stat-label">Disciplíny</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES PREVIEW -->
+    <section class="services-preview">
+      <div class="section-header">
+        <div class="section-label">Čo robím</div>
+        <h2>Komplexná kreatívna tvorba</h2>
+      </div>
+      <div class="services-grid">
+        <a href="sluzby.html#grafika" class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M8 32L20 8l12 24" stroke="currentColor" stroke-width="1.5"/><path d="M12 24h16" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Grafický dizajn</h3>
+          <p>Logá, branding, tlačoviny, sociálne siete. Vizuálna identita, ktorá vyčnieva.</p>
+          <span class="service-arrow">→</span>
+        </a>
+        <a href="sluzby.html#fotografia" class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="21" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M6 16h4l3-4h14l3 4h4v16H6V16z" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Fotografia</h3>
+          <p>Produktová, portrétna, eventová. Každý záber s príbehom.</p>
+          <span class="service-arrow">→</span>
+        </a>
+        <a href="sluzby.html#video" class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 40 40" fill="none"><rect x="4" y="10" width="26" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M30 16l6-4v16l-6-4V16z" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Video produkcia</h3>
+          <p>Reklamné spoty, firemné videá, aftermovies. Pohyb, ktorý predáva.</p>
+          <span class="service-arrow">→</span>
+        </a>
+        <a href="sluzby.html#web" class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M4 16h32" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="12" r="1.5" fill="currentColor"/><circle cx="15" cy="12" r="1.5" fill="currentColor"/></svg>
+          </div>
+          <h3>Web dizajn</h3>
+          <p>Moderné, rýchle a krásne stránky. Funkčnosť stretáva estetiku.</p>
+          <span class="service-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO PREVIEW -->
+    <section class="portfolio-preview">
+      <div class="section-header">
+        <div class="section-label">Vybrané práce</div>
+        <h2>Portfólio</h2>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item portfolio-item--large">
+          <img src="1.webp" alt="Projekt 1"/>
+          <div class="portfolio-overlay">
+            <span>Branding</span>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="2.webp" alt="Projekt 2"/>
+          <div class="portfolio-overlay">
+            <span>Fotografia</span>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="3.webp" alt="Projekt 3"/>
+          <div class="portfolio-overlay">
+            <span>Video</span>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="4.webp" alt="Projekt 4"/>
+          <div class="portfolio-overlay">
+            <span>Web</span>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-cta">
+        <a href="portfolio.html" class="btn btn--outline">Všetky práce</a>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="cta-band">
+      <div class="cta-band-inner">
+        <h2>Máte projekt? <em>Porozprávajme sa.</em></h2>
+        <a href="kontakt.html" class="btn btn--gold">Napíš mi</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="index.html" class="nav-logo">
+  <img src="logo.webp" alt="Logo" class="logo footer-logo">
+    </a>
+      <div class="footer-links">
+        <a href="sluzby.html">Služby</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <p class="footer-copy">© 2026 Filip S. Belan DΞSIGИ</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
