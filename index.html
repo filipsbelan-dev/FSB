@@ -197,22 +197,6 @@
   text-align: center;
   z-index: 9999;
 ">
-  Tento web používa technické cookies pre správne fungovanie.
-  <button onclick="acceptCookies()" style="margin-left:10px;">
-    Rozumiem
-  </button>
-</div>
-
-<script>
-function acceptCookies() {
-  localStorage.setItem("cookiesAccepted", "true");
-  document.getElementById("cookie-banner").style.display = "none";
-}
-
-window.onload = function() {
-  if (localStorage.getItem("cookiesAccepted")) {
-    document.getElementById("cookie-banner").style.display = "none";
-  }
-};
+  
 </script>
 </html>
