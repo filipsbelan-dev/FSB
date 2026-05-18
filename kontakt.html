@@ -10,7 +10,8 @@
 <body>
 
   <nav class="navbar">
-     <img src="logo.webp" alt="Logo" class="logo">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.webp" alt="Logo" class="logo">
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
       <span></span><span></span>
@@ -46,7 +47,7 @@
               </div>
               <div>
                 <span class="contact-item-label">Email</span>
-                <a href="mailto:info@filipbelan.sk" class="contact-item-value">filipsamuelbelan@gmail.com</a>
+                <a href="mailto:filipsamuelbelan@gmail.com" class="contact-item-value">filipsamuelbelan@gmail.com</a>
               </div>
             </div>
             <div class="contact-item">
@@ -55,7 +56,7 @@
               </div>
               <div>
                 <span class="contact-item-label">Telefón</span>
-                <a href="tel:+421900000000" class="contact-item-value">+421 915 124 366</a>
+                <a href="tel:+421915124366" class="contact-item-value">+421 915 124 366</a>
               </div>
             </div>
             <div class="contact-item">
@@ -96,15 +97,15 @@
             <textarea id="message" name="message" rows="5" placeholder="Opíšte váš projekt alebo ideu..." required></textarea>
           </div>
           <button type="submit" class="btn btn--gold btn--full">Odoslať správu</button>
-           <div style="margin-top:10px;">
-    <input type="checkbox" id="gdpr" required>
-    <label for="gdpr">
-      Súhlasím so spracovaním osobných údajov podľa 
-      <a href="/ochrana-osobnych-udajov" target="_blank">
-        zásad ochrany osobných údajov.
-      </a>
-    </label>
-  </div>
+          <div style="margin-top:10px;">
+            <input type="checkbox" id="gdpr" required>
+            <label for="gdpr">
+              Súhlasím so spracovaním osobných údajov podľa
+              <a href="/ochrana-osobnych-udajov" target="_blank">
+                zásad ochrany osobných údajov.
+              </a>
+            </label>
+          </div>
           <p class="form-note">Odpoviem do 24 hodín.</p>
         </form>
 
@@ -115,8 +116,9 @@
 
   <footer class="footer">
     <div class="footer-inner">
-       <img src="logo.webp" alt="Logo" class="logo footer-logo">
-    </a>
+      <a href="index.html" class="nav-logo">
+        <img src="logo.webp" alt="Logo" class="logo footer-logo">
+      </a>
       <div class="footer-links">
         <a href="sluzby.html">Služby</a>
         <a href="portfolio.html">Portfólio</a>
@@ -126,11 +128,6 @@
     </div>
   </footer>
 
+  <script src="main.js"></script>
 </body>
-
-
-  <button type="submit">Odoslať</button>
-
-</form>
 </html>
-
