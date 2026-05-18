@@ -65,15 +65,15 @@
         </div>
         <div class="intro-stats">
           <div class="stat">
-            <span class="stat-num">6+</span>
+            <span class="stat-num count-stat" data-count="6" data-suffix="+">0+</span>
             <span class="stat-label">Rokov skúseností</span>
           </div>
           <div class="stat">
-            <span class="stat-num">100+</span>
+            <span class="stat-num count-stat" data-count="100" data-suffix="+">0+</span>
             <span class="stat-label">Projektov</span>
           </div>
           <div class="stat">
-            <span class="stat-num">4</span>
+            <span class="stat-num count-stat" data-count="4" data-suffix="">0</span>
             <span class="stat-label">Disciplíny</span>
           </div>
         </div>
@@ -131,31 +131,70 @@
       <div class="portfolio-grid">
         <div class="portfolio-item portfolio-item--large">
           <img src="1.webp" alt="Projekt 1"/>
-          <div class="portfolio-overlay">
-            <span>Branding</span>
-          </div>
+          <div class="portfolio-overlay"><span>Branding</span></div>
         </div>
         <div class="portfolio-item">
           <img src="2.webp" alt="Projekt 2"/>
-          <div class="portfolio-overlay">
-            <span>Fotografia</span>
-          </div>
+          <div class="portfolio-overlay"><span>Fotografia</span></div>
         </div>
         <div class="portfolio-item">
           <img src="3.webp" alt="Projekt 3"/>
-          <div class="portfolio-overlay">
-            <span>Grafika</span>
-          </div>
+          <div class="portfolio-overlay"><span>Grafika</span></div>
         </div>
         <div class="portfolio-item">
           <img src="4.webp" alt="Projekt 4"/>
-          <div class="portfolio-overlay">
-            <span>Web</span>
-          </div>
+          <div class="portfolio-overlay"><span>Web</span></div>
         </div>
       </div>
       <div class="portfolio-cta">
         <a href="portfolio.html" class="btn btn--outline">Všetky práce</a>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews-section">
+      <div class="section-header">
+        <div class="section-label">Referencie</div>
+        <h2>Čo hovoria <em>zákazníci</em></h2>
+      </div>
+      <div class="reviews-track">
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">„Filip S. Belan DESIGN mi vytvoril logo, výsledok prekonal očakávania. Profesionálny prístup, rýchle reakcie a výsledok, ktorý ma skutočne reprezentuje."</p>
+          <div class="review-author">
+            <div class="review-avatar">LS</div>
+            <div>
+              <div class="review-name">Lukáš Simonides</div>
+              <div class="review-role">DJ, KUK1NO</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">„Fotografovanie eventu prebehlo hladko, fotky boli hotové do 2 dní. Kvalita je skvelá. Jednoznačne odporúčam."</p>
+          <div class="review-author">
+            <div class="review-avatar">BK</div>
+            <div>
+              <div class="review-name">Ing. Mgr. Božena Kováčová</div>
+              <div class="review-role">Starostka </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">„Web stránka od Filipa je presne to čo sme potrebovali, elegantná, moderná a ľahko sa na nej naviguje. Odovzdal na čas a komunikácia bola bezproblémová."</p>
+          <div class="review-author">
+            <div class="review-avatar">DC</div>
+            <div>
+              <div class="review-name">Daniel Cibula</div>
+              <div class="review-role">Konateľ, Pohrebná služba Florena - A, Handlová</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -172,8 +211,8 @@
   <footer class="footer">
     <div class="footer-inner">
       <a href="index.html" class="nav-logo">
-  <img src="logo.webp" alt="Logo" class="logo footer-logo">
-    </a>
+        <img src="logo.webp" alt="Logo" class="logo footer-logo">
+      </a>
       <div class="footer-links">
         <a href="sluzby.html">Služby</a>
         <a href="portfolio.html">Portfólio</a>
@@ -184,7 +223,18 @@
   </footer>
 
   <script src="main.js"></script>
-</body>
 
-</script>
+  <!-- COOKIES BANNER -->
+  <div id="cookie-banner">
+    <div class="cookie-text">
+      <strong>🍪 Táto stránka používa cookies</strong><br>
+      Používame analytické cookies na zlepšenie zážitku. Vaše dáta nezdieľame s tretími stranami.
+    </div>
+    <div class="cookie-btns">
+      <button id="cookie-decline">Odmietnuť</button>
+      <button id="cookie-accept">Súhlasím</button>
+    </div>
+  </div>
+
+</body>
 </html>

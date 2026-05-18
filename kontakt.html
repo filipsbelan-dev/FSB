@@ -97,13 +97,11 @@
             <textarea id="message" name="message" rows="5" placeholder="Opíšte váš projekt alebo ideu..." required></textarea>
           </div>
           <button type="submit" class="btn btn--gold btn--full">Odoslať správu</button>
-          <div style="margin-top:10px;">
-            <input type="checkbox" id="gdpr" required>
-            <label for="gdpr">
+          <div style="margin-top:10px; font-size:0.82rem; color:var(--gray); display:flex; gap:0.5rem; align-items:flex-start;">
+            <input type="checkbox" id="gdpr" required style="margin-top:3px; flex-shrink:0; accent-color:var(--gold);">
+            <label for="gdpr" style="line-height:1.5;">
               Súhlasím so spracovaním osobných údajov podľa
-              <a href="/ochrana-osobnych-udajov" target="_blank">
-                zásad ochrany osobných údajov.
-              </a>
+              <a href="/ochrana-osobnych-udajov" target="_blank" style="color:var(--gold);">zásad ochrany osobných údajov.</a>
             </label>
           </div>
           <p class="form-note">Odpoviem do 24 hodín.</p>
@@ -129,5 +127,18 @@
   </footer>
 
   <script src="main.js"></script>
+
+  <!-- COOKIES BANNER -->
+  <div id="cookie-banner">
+    <div class="cookie-text">
+      <strong>🍪 Táto stránka používa cookies</strong><br>
+      Používame analytické cookies na zlepšenie zážitku. Vaše dáta nezdieľame s tretími stranami.
+    </div>
+    <div class="cookie-btns">
+      <button id="cookie-decline">Odmietnuť</button>
+      <button id="cookie-accept">Súhlasím</button>
+    </div>
+  </div>
+
 </body>
 </html>

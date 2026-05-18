@@ -17,7 +17,6 @@ if (navToggle && navLinks) {
     navLinks.classList.toggle('open');
   });
 
-  // Close on link click
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => navLinks.classList.remove('open'));
   });
@@ -25,7 +24,7 @@ if (navToggle && navLinks) {
 
 // ---- SCROLL REVEAL ----
 const revealEls = document.querySelectorAll(
-  '.intro-inner, .service-card, .service-block, .portfolio-item, .stat, .contact-inner, .cta-band-inner'
+  '.intro-inner, .service-card, .service-block, .portfolio-item, .stat, .contact-inner, .cta-band-inner, .review-card'
 );
 
 revealEls.forEach(el => el.classList.add('reveal'));
@@ -40,6 +39,38 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 revealEls.forEach(el => observer.observe(el));
+
+// ---- COUNT-UP ANIMATION ----
+function animateCount(el) {
+  const target = parseInt(el.getAttribute('data-count'));
+  const suffix = el.getAttribute('data-suffix') || '';
+  const duration = 1800;
+  let start = null;
+
+  function step(timestamp) {
+    if (!start) start = timestamp;
+    const progress = Math.min((timestamp - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target) + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+const countEls = document.querySelectorAll('.count-stat');
+if (countEls.length) {
+  const countObserved = new Set();
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !countObserved.has(entry.target)) {
+        countObserved.add(entry.target);
+        animateCount(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  countEls.forEach(el => countObserver.observe(el));
+}
 
 // ---- PORTFOLIO FILTER ----
 const filterBtns = document.querySelectorAll('.filter-btn');
@@ -106,7 +137,7 @@ function showPrev() {
 }
 
 if (lightbox) {
-  galleryItems.forEach((item, index) => {
+  galleryItems.forEach((item) => {
     item.addEventListener('click', () => {
       const visible = getVisibleItems();
       const visibleIndex = visible.indexOf(item);
@@ -148,3 +179,22 @@ if (contactForm) {
     }, 3000);
   });
 }
+
+// ---- COOKIES BANNER ----
+(function() {
+  const banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+  const consent = localStorage.getItem('fsb_cookie_consent');
+  if (!consent) {
+    // Small delay so it slides in after page load
+    setTimeout(() => banner.classList.add('visible'), 800);
+  }
+  document.getElementById('cookie-accept')?.addEventListener('click', () => {
+    localStorage.setItem('fsb_cookie_consent', 'accepted');
+    banner.classList.remove('visible');
+  });
+  document.getElementById('cookie-decline')?.addEventListener('click', () => {
+    localStorage.setItem('fsb_cookie_consent', 'declined');
+    banner.classList.remove('visible');
+  });
+})();

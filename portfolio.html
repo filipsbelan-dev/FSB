@@ -10,7 +10,8 @@
 <body>
 
   <nav class="navbar">
-     <img src="logo.webp" alt="Logo" class="logo">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.webp" alt="Logo" class="logo">
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
       <span></span><span></span>
@@ -32,7 +33,6 @@
       </div>
     </section>
 
-    <!-- FILTER -->
     <section class="portfolio-page">
       <div class="filter-bar">
         <button class="filter-btn active" data-filter="all">Všetko</button>
@@ -44,7 +44,7 @@
 
       <div class="gallery-masonry" id="gallery">
         <div class="gallery-item" data-category="grafika"><img src="1.webp" alt=""/><div class="gallery-overlay"><span>Grafika</span></div></div>
-        <div class="gallery-item" data-category="fotografia"><img src="2.webp" alt=""/><div class="gallery-overlay"><span>fotografia</span></div></div>
+        <div class="gallery-item" data-category="fotografia"><img src="2.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
         <div class="gallery-item" data-category="grafika"><img src="3.webp" alt=""/><div class="gallery-overlay"><span>Grafika</span></div></div>
         <div class="gallery-item" data-category="web"><img src="4.webp" alt=""/><div class="gallery-overlay"><span>Web</span></div></div>
         <div class="gallery-item" data-category="web"><img src="5.webp" alt=""/><div class="gallery-overlay"><span>Web</span></div></div>
@@ -64,8 +64,9 @@
 
   <footer class="footer">
     <div class="footer-inner">
-       <img src="logo.webp" alt="Logo" class="logo footer-logo">
-    </a>
+      <a href="index.html" class="nav-logo">
+        <img src="logo.webp" alt="Logo" class="logo footer-logo">
+      </a>
       <div class="footer-links">
         <a href="sluzby.html">Služby</a>
         <a href="portfolio.html">Portfólio</a>
@@ -76,5 +77,18 @@
   </footer>
 
   <script src="main.js"></script>
+
+  <!-- COOKIES BANNER -->
+  <div id="cookie-banner">
+    <div class="cookie-text">
+      <strong>🍪 Táto stránka používa cookies</strong><br>
+      Používame analytické cookies na zlepšenie zážitku. Vaše dáta nezdieľame s tretími stranami.
+    </div>
+    <div class="cookie-btns">
+      <button id="cookie-decline">Odmietnuť</button>
+      <button id="cookie-accept">Súhlasím</button>
+    </div>
+  </div>
+
 </body>
 </html>
