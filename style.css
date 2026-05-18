@@ -1046,8 +1046,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .portfolio-item:has(img[src=""]), 
-.portfolio-item:has(img:not([src])),
-.portfolio-grid a:not(:has(img)),
-.portfolio-item:nth-child(n+3) {
+.portfolio-item:has(img:not([src])) {
     display: none !important;
 }
