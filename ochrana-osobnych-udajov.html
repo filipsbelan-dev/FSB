@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ochrana osobných údajov — Filip S. Belan</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <style>
+    .gdpr-content {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 3rem 5vw 6rem;
+    }
+    .gdpr-content h2 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--gold);
+      margin: 2.5rem 0 0.75rem;
+    }
+    .gdpr-content h2:first-child { margin-top: 0; }
+    .gdpr-content p {
+      font-size: 0.9rem;
+      color: var(--cream-dim);
+      line-height: 1.8;
+      margin-bottom: 0.75rem;
+    }
+    .gdpr-content ul {
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .gdpr-content ul li {
+      font-size: 0.9rem;
+      color: var(--cream-dim);
+      line-height: 1.8;
+    }
+    .gdpr-content a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .gdpr-content a:hover { text-decoration: underline; }
+    .gdpr-updated {
+      font-size: 0.78rem;
+      color: var(--gray);
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.06em;
+    }
+    .gdpr-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.webp" alt="Logo" class="logo">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Úvod</a></li>
+      <li><a href="sluzby.html">Služby</a></li>
+      <li><a href="portfolio.html">Portfólio</a></li>
+      <li><a href="cennik.html">Cenník</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <p class="hero-eyebrow">Právne informácie</p>
+        <h1>Ochrana osobných údajov</h1>
+      </div>
+    </section>
+
+    <div class="gdpr-content">
+      <p class="gdpr-updated">Posledná aktualizácia: máj 2026</p>
+
+      <h2>1. Prevádzkovateľ</h2>
+      <p>Prevádzkovateľom webovej stránky <strong>filipsbelan.sk</strong> a správcom osobných údajov je:</p>
+      <p>
+        <strong>Filip Samuel Belan</strong><br/>
+        Handlová, Slovenská republika<br/>
+        Email: <a href="mailto:filipsamuelbelan@gmail.com">filipsamuelbelan@gmail.com</a><br/>
+        Telefón: <a href="tel:+421915124366">+421 915 124 366</a>
+      </p>
+
+      <hr class="gdpr-divider"/>
+
+      <h2>2. Aké údaje zbierame</h2>
+      <p>Pri vyplnení kontaktného formulára spracúvame nasledovné osobné údaje:</p>
+      <ul>
+        <li>Meno a priezvisko</li>
+        <li>E-mailová adresa</li>
+        <li>Telefónne číslo (ak ho uvediete)</li>
+        <li>Obsah správy / popis projektu</li>
+        <li>Typ požadovanej služby</li>
+      </ul>
+      <p>Pri návšteve stránky môžeme zbierať technické údaje ako IP adresa, typ prehliadača a navštívené stránky — prostredníctvom analytických cookies (viď bod 6).</p>
+
+      <hr class="gdpr-divider"/>
+
+      <h2>3. Účel spracovania</h2>
+      <p>Vaše osobné údaje spracúvame výlučne na tieto účely:</p>
+      <ul>
+        <li>Odpoveď na vašu dopyt alebo cenovú ponuku</li>
+        <li>Komunikácia v rámci spolupráce na projekte</li>
+        <li>Vystavenie faktúry (ak dôjde k spolupráci)</li>
+        <li>Zlepšenie funkčnosti a obsahu webovej stránky (anonymné štatistiky)</li>
+      </ul>
+
+      <hr class="gdpr-divider"/>
+
+      <h2>4. Právny základ</h2>
+      <p>Spracúvanie osobných údajov prebieha na základe:</p>
+      <ul>
+        <li><strong>Súhlasu</strong> — pri odoslaní kontaktného formulára</li>
+        <li><strong>Oprávneného záujmu</strong> — pri analytickom sledovaní návštevnosti</li>
+        <li><strong>Plnenia zmluvy</strong> — ak dôjde k uzatvoreniu spolupráce</li>
+      </ul>
+
+      <hr class="gdpr-divider"/>
+
+      <h2>5. Zdieľanie údajov s tretími stranami</h2>
+      <p>Vaše osobné údaje <strong>nepredávame ani neposkytujeme</strong> tretím stranám na komerčné účely. Údaje z kontaktného formulára sú spracúvané prostredníctvom služby <a href="https://formspree.io" target="_blank">Formspree</a>, ktorá zabezpečuje doručenie správ. Formspree spracúva údaje v súlade s GDPR.</p>
+
+      <hr class="gdpr-divider"/>
+
+      <h2>6. Cookies</h2>
+      <p>Táto stránka používa cookies — malé textové súbory ukladané vo vašom prehliadači. Používame:</p>
+      <ul>
+        <li><strong>Nevyhnutné cookies</strong> — zabezpečujú základnú funkčnosť stránky (napr. zapamätanie súhlasu s cookies)</li>
+        <li><strong>Analytické cookies</strong> — pomáhajú nám pochopiť ako návštevníci stránku používajú (anonymné dáta)</li>
+      </ul>
+      <p>Cookies môžete kedykoľvek odmietnuť alebo vymazať v nastaveniach vášho prehliadača.</p>
+
+      <hr class="gdpr-divider"/>
+
+      <h2>7. Doba uchovávania</h2>
+      <p>Osobné údaje uchovávame len po dobu nevyhnutnú na splnenie účelu, na ktorý boli zhromaždené:</p>
+      <ul>
+        <li>Kontaktné správy bez následnej spolupráce — do <strong>12 mesiacov</strong></li>
+        <li>Údaje súvisiace s realizovaným projektom — po dobu <strong>5 rokov</strong> (daňová povinnosť)</li>
+      </ul>
+
+      <hr class="gdpr-divider"/>
+
+      <h2>8. Vaše práva</h2>
+      <p>V súlade s nariadením GDPR máte právo:</p>
+      <ul>
+        <li><strong>Na prístup</strong> — vedieť, aké údaje o vás spracúvame</li>
+        <li><strong>Na opravu</strong> — požiadať o opravu nesprávnych údajov</li>
+        <li><strong>Na vymazanie</strong> — požiadať o vymazanie vašich údajov („právo byť zabudnutý")</li>
+        <li><strong>Na prenosnosť</strong> — získať vaše údaje v strojovo čitateľnom formáte</li>
+        <li><strong>Odvolať súhlas</strong> — kedykoľvek odvolať súhlas so spracovaním</li>
+        <li><strong>Podať sťažnosť</strong> — na Úrade na ochranu osobných údajov SR (<a href="https://dataprotection.gov.sk" target="_blank">dataprotection.gov.sk</a>)</li>
+      </ul>
+      <p>Pre uplatnenie svojich práv nás kontaktujte na <a href="mailto:filipsamuelbelan@gmail.com">filipsamuelbelan@gmail.com</a>.</p>
+
+      <hr class="gdpr-divider"/>
+
+      <h2>9. Zabezpečenie</h2>
+      <p>Webová stránka je zabezpečená protokolom HTTPS. Prijímame primerané technické a organizačné opatrenia na ochranu vašich osobných údajov pred neoprávneným prístupom, zmenou alebo zverejnením.</p>
+
+      <hr class="gdpr-divider"/>
+
+      <h2>10. Zmeny zásad</h2>
+      <p>Tieto zásady môžeme priebežne aktualizovať. O zmenách vás budeme informovať prostredníctvom tejto stránky. Dátum poslednej aktualizácie je uvedený v hornej časti dokumentu.</p>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.webp" alt="Logo" class="logo footer-logo">
+      </a>
+      <div class="footer-links">
+        <a href="sluzby.html">Služby</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="cennik.html">Cenník</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <p class="footer-copy">© 2026 Filip S. Belan DΞSIGИ</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
