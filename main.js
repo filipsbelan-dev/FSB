@@ -96,63 +96,180 @@ if (filterBtns.length) {
 }
 
 // ---- LIGHTBOX ----
+// ---- LIGHTBOX (Uprataná a stopercentne funkčná verzia) ----
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
 const lightboxClose = document.getElementById('lightboxClose');
 const lightboxPrev = document.getElementById('lightboxPrev');
 const lightboxNext = document.getElementById('lightboxNext');
+const zoomInBtn = document.getElementById('zoomIn');
+const zoomOutBtn = document.getElementById('zoomOut');
 
-let currentIndex = 0;
-let visibleItems = [];
+// Načítame položky presne podľa triedy vo tvojom HTML
+const polozkyPortfolia = document.querySelectorAll('.gallery-item');
 
-function getVisibleItems() {
-  return [...document.querySelectorAll('.gallery-item:not(.hidden)')];
+let currentAlbumImages = []; 
+let currentIndex = 0;        
+let currentZoom = 1;
+
+// Premenné pre držanie a posúvanie priblíženej fotky
+let isDragging = false;
+let startX = 0, startY = 0;
+let translateX = 0, translateY = 0;
+
+function getAlbumImages(item) {
+  const images = [];
+  const mainImg = item.querySelector('img');
+  if (mainImg) images.push(mainImg.src);
+  
+  const hiddenImgs = item.querySelectorAll('.hidden-album img');
+  hiddenImgs.forEach(img => images.push(img.src));
+  
+  return images;
 }
 
-function openLightbox(index) {
-  visibleItems = getVisibleItems();
+function updateImageTransform() {
+  if (lightboxImg) {
+    lightboxImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentZoom})`;
+  }
+}
+
+function resetZoom() {
+  currentZoom = 1;
+  translateX = 0;
+  translateY = 0;
+  updateImageTransform();
+}
+
+function openLightbox(images, index) {
+  currentAlbumImages = images;
   currentIndex = index;
-  const img = visibleItems[currentIndex].querySelector('img');
-  lightboxImg.src = img.src;
-  lightbox.classList.add('active');
+  
+  resetZoom(); 
+  if (lightboxImg) lightboxImg.src = currentAlbumImages[currentIndex];
+  if (lightbox) lightbox.classList.add('active');
   document.body.style.overflow = 'hidden';
+
+  // Zobrazenie alebo skrytie šípok podľa toho, či má projekt album
+  if (currentAlbumImages.length > 1) {
+    if (lightboxPrev) lightboxPrev.style.display = 'flex';
+    if (lightboxNext) lightboxNext.style.display = 'flex';
+  } else {
+    if (lightboxPrev) lightboxPrev.style.display = 'none';
+    if (lightboxNext) lightboxNext.style.display = 'none';
+  }
 }
 
 function closeLightbox() {
-  lightbox.classList.remove('active');
+  if (lightbox) lightbox.classList.remove('active');
   document.body.style.overflow = '';
-  lightboxImg.src = '';
+  if (lightboxImg) lightboxImg.src = '';
+  resetZoom();
 }
 
 function showNext() {
-  visibleItems = getVisibleItems();
-  currentIndex = (currentIndex + 1) % visibleItems.length;
-  lightboxImg.src = visibleItems[currentIndex].querySelector('img').src;
+  if (currentAlbumImages.length <= 1) return;
+  currentIndex = (currentIndex + 1) % currentAlbumImages.length;
+  if (lightboxImg) lightboxImg.src = currentAlbumImages[currentIndex];
+  resetZoom(); 
 }
 
 function showPrev() {
-  visibleItems = getVisibleItems();
-  currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
-  lightboxImg.src = visibleItems[currentIndex].querySelector('img').src;
+  if (currentAlbumImages.length <= 1) return;
+  currentIndex = (currentIndex - 1 + currentAlbumImages.length) % currentAlbumImages.length;
+  if (lightboxImg) lightboxImg.src = currentAlbumImages[currentIndex];
+  resetZoom(); 
 }
 
-if (lightbox) {
-  galleryItems.forEach((item) => {
+if (lightbox && polozkyPortfolia.length > 0) {
+  // Priradenie kliknutia pre všetky projekty v mriežke
+  polozkyPortfolia.forEach((item) => {
     item.addEventListener('click', () => {
-      const visible = getVisibleItems();
-      const visibleIndex = visible.indexOf(item);
-      openLightbox(visibleIndex);
+      const albumImages = getAlbumImages(item);
+      openLightbox(albumImages, 0);
     });
   });
 
   lightboxClose?.addEventListener('click', closeLightbox);
-  lightboxNext?.addEventListener('click', showNext);
-  lightboxPrev?.addEventListener('click', showPrev);
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
+  
+  lightboxNext?.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    showNext();
+  });
+  
+  lightboxPrev?.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    showPrev();
   });
 
+  // Tlačidlá priblíženia (+ / -)
+  zoomInBtn?.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    if (currentZoom < 4) { 
+      currentZoom += 0.5; 
+      updateImageTransform();
+    }
+  });
+
+  zoomOutBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (currentZoom > 0.5) { 
+      currentZoom -= 0.5; 
+      if (currentZoom <= 1) {
+        translateX = 0;
+        translateY = 0;
+      }
+      updateImageTransform();
+    }
+  });
+
+  // Logika pre chytanie a posúvanie zväčšenej fotky myšou
+  lightboxImg?.addEventListener('mousedown', (e) => {
+    if (currentZoom <= 1) return; 
+    e.preventDefault();
+    isDragging = true;
+    startX = e.clientX - translateX;
+    startY = e.clientY - translateY;
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    translateX = e.clientX - startX;
+    translateY = e.clientY - startY;
+    updateImageTransform();
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+  });
+
+  // Dotykové ovládanie pre posúvanie na mobiloch
+  lightboxImg?.addEventListener('touchstart', (e) => {
+    if (currentZoom <= 1) return;
+    isDragging = true;
+    startX = e.touches[0].clientX - translateX;
+    startY = e.touches[0].clientY - translateY;
+  });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    translateX = e.touches[0].clientX - startX;
+    translateY = e.touches[0].clientY - startY;
+    updateImageTransform();
+  });
+
+  document.addEventListener('touchend', () => {
+    isDragging = false;
+  });
+
+  // Kliknutie na prázdne pozadie alebo nezväčšenú fotku zatvorí lightbox
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target.id === 'lightbox' || (e.target === lightboxImg && currentZoom <= 1)) {
+      closeLightbox();
+    }
+  });
+
+  // Klávesnica (ESC a šípky)
   document.addEventListener('keydown', (e) => {
     if (!lightbox.classList.contains('active')) return;
     if (e.key === 'Escape') closeLightbox();
@@ -160,7 +277,6 @@ if (lightbox) {
     if (e.key === 'ArrowLeft') showPrev();
   });
 }
-
 // ---- CONTACT FORM ----
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
