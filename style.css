@@ -41,6 +41,12 @@ body {
 }
 
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* Portfolio stránka — obrázky si zachovajú pôvodný pomer strán */
+.portfolio-page .portfolio-grid img {
+  height: auto;
+  object-fit: unset;
+}
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
@@ -1365,4 +1371,197 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     justify-content: center;
     margin: 0.5rem 0;
   }
+}
+
+/* Skryje pokračujúce fotky projektu v hlavnej mriežke */
+.hidden-album { display: none; }
+
+/* Kontajner pre miniatúry v overlayi */
+.overlay-thumbs {
+  display: flex;
+  gap: 8px;                 /* Medzera medzi miniatúrami */
+  justify-content: center;  /* Vycentruje ich vodorovne */
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;       /* Jemný odskok od spodku */
+}
+
+/* ===================== FOOTER SOCIALS ===================== */
+.footer-socials {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.footer-socials a {
+  color: var(--cream-dim);
+  transition: var(--transition);
+}
+
+.footer-socials a:hover {
+  color: var(--gold);
+}
+
+.footer-socials svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===================== PORTFOLIO STRÁNKA — MRIEŽKA (3 STĹPCE) ===================== */
+.portfolio-page .portfolio-grid {
+  display: block;
+  columns: 3;
+  column-gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.portfolio-page .gallery-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+  break-inside: avoid;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio-page .gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: unset;
+  display: block;
+  transition: transform var(--transition);
+}
+
+.portfolio-page .gallery-item:hover img {
+  transform: scale(1.03);
+}
+
+.portfolio-page .gallery-item:hover .gallery-overlay {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 1;
+}
+
+.overlay-thumbs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  width: 100%;
+}
+
+.overlay-thumbs .thumb {
+  width: 45px !important;
+  height: 45px !important;
+  object-fit: cover !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* ===================== FINÁLNY LIGHTBOX S PODPOROU ŠÍPOK A ZOOMU ===================== */
+#lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(10, 10, 10, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2000;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Obrázok v lightboxe - vycentrovaný, pripravený na zoom */
+#lightboxImg {
+  max-width: 85vw;
+  max-height: 80vh;
+  object-fit: contain;
+  transition: transform 0.2s ease-out;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+#lightboxImg:active {
+  cursor: grabbing;
+}
+
+/* ŠÍPKY PREPÍNANIA - Natvrdo viditeľné, keď je lightbox aktívny */
+#lightbox.active .lightbox-arrow {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--cream);
+  font-size: 4rem;
+  cursor: pointer;
+  z-index: 2200;
+  transition: var(--transition);
+  padding: 20px;
+}
+
+#lightbox.active .lightbox-arrow:hover {
+  color: var(--gold);
+}
+
+.lightbox-arrow.prev { left: 30px; }
+.lightbox-arrow.next { right: 30px; }
+
+/* Tlačidlo na zatvorenie (X) */
+.lightbox-close {
+  position: absolute;
+  top: 30px; right: 40px;
+  background: none; border: none;
+  color: var(--cream); font-size: 3rem;
+  cursor: pointer; z-index: 2200;
+  transition: var(--transition);
+}
+
+.lightbox-close:hover { color: var(--gold); }
+
+/* PANEL PRE LUPY (+ a -) */
+.lightbox-zoom-controls {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 2200;
+}
+
+.lightbox-zoom-controls button {
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid var(--border);
+  color: var(--cream);
+  font-size: 1.6rem;
+  width: 45px; height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.lightbox-zoom-controls button:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: var(--black);
 }

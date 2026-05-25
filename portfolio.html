@@ -47,24 +47,164 @@
         <button class="filter-btn" data-filter="web">Web</button>
       </div>
 
-      <div class="gallery-masonry" id="gallery">
-        <div class="gallery-item" data-category="grafika"><img src="1.webp" alt=""/><div class="gallery-overlay"><span>Grafika</span></div></div>
-        <div class="gallery-item" data-category="fotografia"><img src="2.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
-        <div class="gallery-item" data-category="grafika"><img src="3.webp" alt=""/><div class="gallery-overlay"><span>Grafika</span></div></div>
-        <div class="gallery-item" data-category="web"><img src="4.webp" alt=""/><div class="gallery-overlay"><span>Web</span></div></div>
-        <div class="gallery-item" data-category="web"><img src="5.webp" alt=""/><div class="gallery-overlay"><span>Web</span></div></div>
-        <div class="gallery-item" data-category="fotografia"><img src="6.webp" alt=""/><div class="gallery-overlay"><span>Fotografia</span></div></div>
-      </div>
-    </section>
+<div class="portfolio-grid">
 
-  </main>
+  <div class="gallery-item" data-category="web">
+    <img src="7.webp" alt="Hlavná stránka webu"/>
+    
+    <div class="hidden-album">
+      <img src="f1.webp" alt="Podstránka webu"/>
+      <img src="f2.webp" alt="Mobilná verzia"/>
+      <img src="f3.webp" alt="Ďalšia podstránka"/>
+      <img src="f4.webp" alt="Detail dizajnu"/>
+      <img src="f5.webp" alt="Kontakt sekcia"/>
+    </div>
+
+    <div class="gallery-overlay">
+      <div class="overlay-thumbs" style="pointer-events: none;">
+        <img src="7.webp" alt="Miniatúra 1" class="thumb" />
+        <img src="f1.webp" alt="Miniatúra 2" class="thumb" />
+        <img src="f2.webp" alt="Miniatúra 3" class="thumb" />
+        <img src="f3.webp" alt="Miniatúra 4" class="thumb" />
+        <img src="f4.webp" alt="Miniatúra 5" class="thumb" />
+        <img src="f5.webp" alt="Miniatúra 6" class="thumb" />
+      </div>
+    </div>
+  </div> <div class="gallery-item" data-category="web">
+    <img src="4.webp" alt="Hlavná stránka webu"/>
+    
+    <div class="hidden-album">
+      <img src="p1.webp" alt="Podstránka webu"/>
+      <img src="p2.webp" alt="Mobilná verzia"/>
+      <img src="p3.webp" alt="Ďalšia podstránka"/>
+      <img src="p4.webp" alt="Detail dizajnu"/>
+      <img src="p5.webp" alt="Kontakt sekcia"/>
+    </div>
+
+    <div class="gallery-overlay">
+      <div class="overlay-thumbs" style="pointer-events: none;">
+        <img src="4.webp" alt="Miniatúra 1" class="thumb" />
+        <img src="p1.webp" alt="Miniatúra 2" class="thumb" />
+        <img src="p2.webp" alt="Miniatúra 3" class="thumb" />
+        <img src="p3.webp" alt="Miniatúra 4" class="thumb" />
+        <img src="p4.webp" alt="Miniatúra 5" class="thumb" />
+        <img src="p5.webp" alt="Miniatúra 6" class="thumb" />
+      </div>
+    </div>
+
+    </div> <div class="gallery-item" data-category="web">
+    <img src="5.webp" alt="Hlavná stránka webu"/>
+    
+    <div class="hidden-album">
+      <img src="s1.webp" alt="Podstránka webu"/>
+      <img src="s2.webp" alt="Mobilná verzia"/>
+      <img src="s3.webp" alt="Ďalšia podstránka"/>
+    </div>
+
+    <div class="gallery-overlay">
+      <div class="overlay-thumbs" style="pointer-events: none;">
+        <img src="5.webp" alt="Miniatúra 1" class="thumb" />
+        <img src="s1.webp" alt="Miniatúra 2" class="thumb" />
+        <img src="s2.webp" alt="Miniatúra 3" class="thumb" />
+        <img src="s3.webp" alt="Miniatúra 4" class="thumb" />
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       ŠABLÓNY NA DOPLNENIE — zmeň len názvy obrázkov
+       a data-category na: grafika / fotografia / video / web
+       ===================================================== -->
+
+  <!-- ŠABLÓNA 1 — jedna fotka (bez albumu) -->
+  <div class="gallery-item" data-category="grafika">
+    <!-- Hlavná fotka — zmeň názov: -->
+    <img src="3.webp" alt="Logo pre DJ Kuk1no"/>
+
+    <div class="gallery-overlay">
+      <div class="overlay-thumbs" style="pointer-events: none;">
+        <img src="3.webp" alt="Miniatúra 1" class="thumb" />
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-item" data-category="fotografia">
+    <!-- Hlavná fotka — zmeň názov: -->
+    <img src="6.webp" alt="Včela"/>
+
+    <div class="gallery-overlay">
+      <div class="overlay-thumbs" style="pointer-events: none;">
+        <img src="6.webp" alt="Miniatúra 1" class="thumb" />
+      </div>
+    </div>
+  </div>
+
+ <div class="gallery-item" data-category="fotografia">
+    <!-- Hlavná fotka — zmeň názov: -->
+    <img src="2.webp" alt="MDD Handlová"/>
+
+  <div class="hidden-album">
+      <img src="mdd1.webp" alt="Podstránka webu"/>
+      <img src="mdd2.webp" alt="Mobilná verzia"/>
+      <img src="mdd3.webp" alt="Ďalšia podstránka"/>
+  </div>
+
+    <div class="gallery-overlay">
+      <div class="overlay-thumbs" style="pointer-events: none;">
+        <img src="2.webp" alt="Miniatúra 1" class="thumb" />
+        <img src="mdd1.webp" alt="Miniatúra 1" class="thumb" />
+        <img src="mdd2.webp" alt="Miniatúra 1" class="thumb" />
+        <img src="mdd3.webp" alt="Miniatúra 1" class="thumb" />
+      </div>
+    </div>
+  </div>
+
+ <div class="gallery-item" data-category="fotografia">
+    <!-- Hlavná fotka — zmeň názov: -->
+    <img src="bz.webp" alt="zámok"/>
+
+  <div class="hidden-album">
+      <img src="hk.webp" alt="Podstránka webu"/>
+  </div>
+
+    <div class="gallery-overlay">
+      <div class="overlay-thumbs" style="pointer-events: none;">
+        <img src="bz.webp" alt="Miniatúra 1" class="thumb" />
+        <img src="hk.webp" alt="Miniatúra 1" class="thumb" />
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-item" data-category="grafika">
+    <!-- Hlavná fotka — zmeň názov: -->
+    <img src="taxi.webp" alt="cenník taxi"/>
+
+    <div class="gallery-overlay">
+      <div class="overlay-thumbs" style="pointer-events: none;">
+        <img src="taxi.webp" alt="Miniatúra 1" class="thumb" />
+      </div>
+    </div>
+  </div>
+  <!-- ===================================================
+       KONIEC ŠABLÓN — skopíruj hore ľubovolnú šablónu
+       ak potrebuješ pridať ďalší projekt
+       =================================================== -->
+
+</div>
+
 
   <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" id="lightboxClose">✕</button>
-    <button class="lightbox-prev" id="lightboxPrev">‹</button>
-    <img src="" alt="" id="lightboxImg"/>
-    <button class="lightbox-next" id="lightboxNext">›</button>
+ <div id="lightbox" class="lightbox">
+    <button id="lightboxClose" class="lightbox-close" aria-label="Zatvoriť">&times;</button>
+    <button id="lightboxPrev" class="lightbox-arrow prev" aria-label="Predchádzajúci">&#8249;</button>
+    <button id="lightboxNext" class="lightbox-arrow next" aria-label="Nasledujúci">&#8250;</button>
+    
+    <img id="lightboxImg" src="" alt="Lightbox Image"/>
+
+    <div class="lightbox-zoom-controls">
+      <button id="zoomIn" aria-label="Priblížiť">+</button>
+      <button id="zoomOut" aria-label="Oddialiť">&minus;</button>
+    </div>
   </div>
 
   <footer class="footer">
